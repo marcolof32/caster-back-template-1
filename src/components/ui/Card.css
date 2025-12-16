@@ -1,0 +1,40 @@
+.card {
+  background-color: var(--bg-surface);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+/* ========== PADDING ========== */
+
+.card--padding-none {
+  padding: 0;
+}
+
+.card--padding-sm {
+  padding: var(--space-4);
+}
+
+.card--padding-md {
+  padding: var(--space-6);
+}
+
+.card--padding-lg {
+  padding: var(--space-8);
+}
+
+/* ========== MODIFIERS ========== */
+
+.card--hoverable:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card--clickable {
+  cursor: pointer;
+}
+
+.card--clickable:hover {
+  border-color: var(--color-primary-300);
+}

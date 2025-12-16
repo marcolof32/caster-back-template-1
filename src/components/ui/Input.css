@@ -1,0 +1,116 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.input-wrapper--full-width {
+  width: 100%;
+}
+
+.input-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  height: 42px;
+  padding: 0 var(--space-4);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--border-color-dark);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: var(--state-focus-ring);
+}
+
+.input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--bg-surface-secondary);
+}
+
+/* ========== CON ICONOS ========== */
+
+.input-container--with-left-icon .input {
+  padding-left: var(--space-10);
+}
+
+.input-container--with-right-icon .input {
+  padding-right: var(--space-10);
+}
+
+.input-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  pointer-events: none;
+  font-size: 20px;
+}
+
+.input-icon--left {
+  left: var(--space-3);
+}
+
+.input-icon--right {
+  right: var(--space-3);
+}
+
+/* ========== ESTADO ERROR ========== */
+
+.input-container--error .input {
+  border-color: var(--color-error-500);
+}
+
+.input-container--error .input:focus {
+  border-color: var(--color-error-500);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.input-container--error .input-icon {
+  color: var(--color-error-500);
+}
+
+.input-error {
+  font-size: var(--text-sm);
+  color: var(--color-error-600);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.input-helper {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+/* ========== DISABLED ========== */
+
+.input-container--disabled .input-icon {
+  opacity: 0.5;
+}

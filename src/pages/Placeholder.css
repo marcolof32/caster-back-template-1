@@ -1,0 +1,60 @@
+.placeholder-page {
+  animation: fadeIn var(--transition-base);
+}
+
+.placeholder-page__header {
+  margin-bottom: var(--space-8);
+}
+
+.placeholder-page__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.placeholder-page__subtitle {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.placeholder-card {
+  min-height: 400px;
+}
+
+.placeholder-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+  text-align: center;
+}
+
+.placeholder-card__icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-600);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-6);
+}
+
+.placeholder-card__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.placeholder-card__text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0;
+}
+
