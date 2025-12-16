@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Download, Bell, X, ChevronRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Search, Download, Bell, X } from 'lucide-react';
 import { Button, Input, Card, Modal, EditIcon, DeleteIcon } from '../components/ui';
 import './UsuariosApp.css';
 
@@ -78,7 +77,6 @@ const MOCK_USERS: UsuarioApp[] = [
 ];
 
 export const UsuariosApp: React.FC = () => {
-  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCriteria, setFilterCriteria] = useState('Fecha de Registro');
   const [fechaDesde, setFechaDesde] = useState('');
@@ -228,10 +226,6 @@ export const UsuariosApp: React.FC = () => {
   };
 
   // Ver detalles del usuario
-  const handleViewUser = (userId: string) => {
-    navigate(`/usuarios-app/${userId}`);
-  };
-
   return (
     <div className="usuarios-page">
       {/* HEADER */}
