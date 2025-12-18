@@ -35,14 +35,15 @@ export const DeleteIcon: React.FC<IconProps> = ({ size = 20, className = '' }) =
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path
-        d="M10 2a1 1 0 0 0-1 1v1H5a1 1 0 0 0 0 2h1v13a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V6h1a1 1 0 1 0 0-2h-4V3a1 1 0 0 0-1-1h-4Zm4 4v13a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V6h6Z"
-        fill="currentColor"
-      />
-      <path
-        d="M10 9a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1ZM14 9a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1Z"
-        fill="currentColor"
-      />
+      <g clipPath="url(#deleteClip)" fill="currentColor">
+        <path opacity="0.3" d="M8 9h8v10H8z" />
+        <path d="m15.5 4-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM8 9h8v10H8z" />
+      </g>
+      <defs>
+        <clipPath id="deleteClip">
+          <path fill="#fff" d="M0 0h24v24H0z" />
+        </clipPath>
+      </defs>
     </svg>
   );
 };
