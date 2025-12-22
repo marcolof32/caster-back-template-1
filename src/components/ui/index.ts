@@ -13,4 +13,4 @@ export type { CardProps } from './Card';
 export { Modal } from './Modal';
 export type { ModalProps } from './Modal';
 
-export { EditIcon, DeleteIcon } from './Icons';
+export { ViewMoreIcon, EditIcon, DeleteIcon } from './Icons';

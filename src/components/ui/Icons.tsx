@@ -5,6 +5,29 @@ interface IconProps {
   className?: string;
 }
 
+// Icono de Ver Más (Enlace externo)
+export const ViewMoreIcon: React.FC<IconProps> = ({ size = 20, className = '' }) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <g clipPath="url(#viewMoreClip)" fill="currentColor">
+        <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z" />
+      </g>
+      <defs>
+        <clipPath id="viewMoreClip">
+          <path fill="#fff" d="M0 0h24v24H0z" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
 // Icono de Editar (Lápiz)
 export const EditIcon: React.FC<IconProps> = ({ size = 20, className = '' }) => {
   return (
@@ -16,10 +39,15 @@ export const EditIcon: React.FC<IconProps> = ({ size = 20, className = '' }) => 
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path
-        d="M16.862 3.487a2.5 2.5 0 0 1 3.535 3.536l-1.06 1.06-3.536-3.535 1.061-1.06ZM14.094 6.255l-9.668 9.668a1 1 0 0 0-.263.464l-1.137 4.548a.5.5 0 0 0 .606.606l4.548-1.137a1 1 0 0 0 .464-.263l9.668-9.668-3.536-3.536-.682.682Z"
-        fill="currentColor"
-      />
+      <g clipPath="url(#editClip)" fill="currentColor">
+        <path opacity="0.3" d="M5 18.08V19h.92l9.06-9.06-.92-.92z" />
+        <path d="M20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29s-.51.1-.7.29l-1.83 1.83 3.75 3.75zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM5.92 19H5v-.92l9.06-9.06.92.92z" />
+      </g>
+      <defs>
+        <clipPath id="editClip">
+          <path fill="#fff" d="M0 0h24v24H0z" />
+        </clipPath>
+      </defs>
     </svg>
   );
 };

@@ -271,6 +271,15 @@
   transition: all var(--transition-fast);
 }
 
+.notificaciones-table__action-btn--view {
+  color: #2563EB;
+}
+
+.notificaciones-table__action-btn--view:hover {
+  background-color: rgba(37, 99, 235, 0.08);
+  transform: scale(1.1);
+}
+
 .notificaciones-table__action-btn--edit {
   color: #2563EB;
 }

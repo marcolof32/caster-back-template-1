@@ -425,6 +425,15 @@
   transition: all var(--transition-fast);
 }
 
+.usuarios-table__action-btn--view {
+  color: #2563EB;
+}
+
+.usuarios-table__action-btn--view:hover {
+  background-color: rgba(37, 99, 235, 0.08);
+  transform: scale(1.1);
+}
+
 .usuarios-table__action-btn--edit {
   color: #2563EB;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Plus, Calendar, X, ChevronRight } from 'lucide-react';
-import { Button, Input, Card, Modal, Badge, EditIcon, DeleteIcon } from '../components/ui';
+import { Search, Plus, Calendar, X } from 'lucide-react';
+import { Button, Input, Card, Modal, Badge, ViewMoreIcon, EditIcon, DeleteIcon } from '../components/ui';
 import {
   Notificacion,
   EstadoNotificacion,
@@ -328,31 +328,30 @@ export const Notificaciones: React.FC = () => {
                     <td className="notificaciones-table__td">{notif.creadoPor}</td>
                     <td className="notificaciones-table__td notificaciones-table__td--actions">
                       <div className="notificaciones-table__actions">
-                        {puedeEditar(notif.estado) ? (
+                        <button
+                          className="notificaciones-table__action-btn notificaciones-table__action-btn--view"
+                          onClick={() => handleVerDetalle(notif.id)}
+                          title="Ver más"
+                        >
+                          <ViewMoreIcon size={18} />
+                        </button>
+                        {puedeEditar(notif.estado) && (
                           <>
                             <button
                               className="notificaciones-table__action-btn notificaciones-table__action-btn--edit"
                               onClick={() => handleEditar(notif.id)}
                               title="Editar"
                             >
-                              <EditIcon size={16} />
+                              <EditIcon size={18} />
                             </button>
                             <button
                               className="notificaciones-table__action-btn notificaciones-table__action-btn--delete"
                               onClick={() => handleEliminar(notif.id)}
                               title="Eliminar"
                             >
-                              <DeleteIcon size={16} />
+                              <DeleteIcon size={18} />
                             </button>
                           </>
-                        ) : (
-                          <button
-                            className="notificaciones-table__action-btn notificaciones-table__action-btn--chevron"
-                            onClick={() => handleVerDetalle(notif.id)}
-                            title="Ver detalle"
-                          >
-                            <ChevronRight size={20} />
-                          </button>
                         )}
                       </div>
                     </td>

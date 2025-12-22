@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Download, Bell, X } from 'lucide-react';
-import { Button, Input, Card, Modal, EditIcon, DeleteIcon } from '../components/ui';
+import { Button, Input, Card, Modal, ViewMoreIcon, EditIcon, DeleteIcon } from '../components/ui';
+import { useNavigate } from 'react-router-dom';
 import './UsuariosApp.css';
 
 // Tipos extendidos
@@ -77,6 +78,7 @@ const MOCK_USERS: UsuarioApp[] = [
 ];
 
 export const UsuariosApp: React.FC = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCriteria, setFilterCriteria] = useState('Fecha de Registro');
   const [fechaDesde, setFechaDesde] = useState('');
@@ -226,6 +228,10 @@ export const UsuariosApp: React.FC = () => {
   };
 
   // Ver detalles del usuario
+  const handleViewUser = (userId: string) => {
+    navigate(`/usuarios-app/${userId}`);
+  };
+
   return (
     <div className="usuarios-page">
       {/* HEADER */}
@@ -421,6 +427,13 @@ export const UsuariosApp: React.FC = () => {
                     </td>
                     <td className="usuarios-table__td usuarios-table__td--actions">
                       <div className="usuarios-table__actions">
+                        <button
+                          className="usuarios-table__action-btn usuarios-table__action-btn--view"
+                          onClick={() => handleViewUser(user.id)}
+                          title="Ver más"
+                        >
+                          <ViewMoreIcon size={18} />
+                        </button>
                         <button
                           className="usuarios-table__action-btn usuarios-table__action-btn--edit"
                           onClick={() => handleEditUser(user)}
