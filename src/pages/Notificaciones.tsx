@@ -180,14 +180,17 @@ export const Notificaciones: React.FC = () => {
   };
 
   // Obtener variante de badge según estado
+  // Verde (success) = completado/éxito
+  // Amarillo (warning) = alerta/pendiente
+  // Gris (neutral) = estado neutro
   const getBadgeVariant = (estado: EstadoNotificacion) => {
     switch (estado) {
       case 'Enviada':
-        return 'success';
+        return 'success';    // Verde - completado
       case 'Programada':
-        return 'info';
+        return 'warning';    // Amarillo - alerta/pendiente
       case 'Borrador':
-        return 'neutral';
+        return 'neutral';    // Gris - estado neutro
       default:
         return 'neutral';
     }
