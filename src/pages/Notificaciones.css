@@ -235,9 +235,8 @@
 .notificaciones-table__actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: var(--space-3);
-  min-width: 130px;
 }
 
 .notificaciones-table__action-link {
